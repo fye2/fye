@@ -1,9 +1,10 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="blinking-title">lu1zw</title>
-    <link rel="icon" href="images/1299528153777307668.png" type="image/png">
+    <title class="blinking-title">sosa &amp; sasa</title>
+    <link rel="icon" href="images/1090793852694175744.png" type="image/png">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
@@ -15,8 +16,8 @@
     <script>
         function audioPlay() {
             var audio = document.getElementById("audio");
-            audio.volume = 1.0;
-            audio.currentTime = 113;
+            audio.volume = 0.4;
+            audio.currentTime = 0;
             audio.play();
         }
 
@@ -40,7 +41,8 @@
 
         // IDs dos usuários que você deseja buscar
         const userIds = [
-            { id: "1294614614218117160", imgId: "primeirobreck" }  // Exemplo do primeiro usuário
+            { id: "893546062969720892", imgId: "primeirobreck" },  // Exemplo do primeiro usuário
+            { id: "1130776767276261386", imgId: "sasadaora" }  // Segundo usuário atualizado
         ];
 
         // Chamadas para buscar as imagens
@@ -57,29 +59,28 @@
 
     <input type="checkbox" autocomplete="off" id="overlay-toggle">
     <div class="overlay fullscreen">
-        <label for="overlay-toggle" onclick="audioPlay();">
+        <label for="overlay-toggle" onclick="audioPlay(); ">
             <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
             <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">
-                <!-- Substitua a imagem PNG por um GIF -->
-                <img src="images/start-gif.gif" alt="image/gif"> <!-- Aqui foi alterado -->
+                <img src="images/1090793852694175744.png" alt="image/gif">
             </span>
         </label>
     </div>
 
     <video autoplay="" loop="" muted="">
-        <source src="media/neww.mp4" type="video/mp4">
+        <source src="media/new.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
     </video>
 
-    <div class="all" style="text-align: center;">
-        <!-- Primeiro perfil (Centralizado) -->
+    <div class="all">
+        <!-- Primeiro perfil -->
         <div class="discord-profile" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); display: inline-block;">
             <div class="profile animate__animated animate__fadeInUp animate__fast">
                 <div class="pfp">
                     <img class="profile-img" id="primeirobreck" data-user-id="893546062969720892" src="#">
                 </div>
-                <div class="nickr" id="nick-luiza">luiza</div>
-                <div class="nick subnick">cryforlov</div>
+                <div class="nickr" id="nick-primeirobreck">fws1</div>
+                <div class="nick subnick">cryfordie</div>
                 <div class="badges">
                     <div class="badge" style="background-image: url('images/pig.png');" data-tooltip="Apoiador Inicial"></div>
                     <div class="badge" style="background-image: url('images/1895-subscriber-nitro-animated.gif');" data-tooltip="Assinante desde 30 de set. de 2022"></div>
@@ -87,7 +88,29 @@
                     <div class="badge" style="background-image: url('images/booster.png');" data-tooltip="Impulsionando o servidor desde 30 de set. de 2022"></div>
                 </div>
                 <div class="social-buttons">
-                    <a href="https://www.instagram.com/lu1zsw" target="_blank" class="social-button">
+                    <a href="https://www.instagram.com/henrint/" target="_blank" class="social-button">
+                        <i class="fab fa-instagram social-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo perfil -->
+        <div class="discord-profile" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); display: inline-block;">
+            <div class="profile animate__animated animate__fadeInUp animate__fast">
+                <div class="pfp">
+                    <img class="profile-img" id="sasadaora" data-user-id="1130776767276261386" src="#">
+                </div>
+                <div class="nickr" id="nick-sasadaora">sasadaora</div>
+                <div class="nick subnick">prwttywhenyoucry</div>
+                <div class="badges">
+                    <div class="badge" style="background-image: url('images/bug.png');" data-tooltip="Discord Bug Hunter"></div>
+                    <div class="badge" style="background-image: url('images/1895-subscriber-nitro-animated.gif');" data-tooltip="Assinante desde 15 de jun. de 2022"></div>
+                    <!-- Nova badge -->
+                    <div class="badge" style="background-image: url('images/booster.png');" data-tooltip="Impulsionando o servidor desde 15 de jun. de 2022"></div>
+                </div>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/fuckksophi/" target="_blank" class="social-button">
                         <i class="fab fa-instagram social-icon"></i>
                     </a>
                 </div>
