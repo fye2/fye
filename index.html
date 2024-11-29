@@ -21,7 +21,7 @@
         }
 
         function fetchUserImage(userId, imgElementId) {
-            fetch(https://discord-web-api.glitch.me/discord/user/${userId}, {
+            fetch(`https://discord-web-api.glitch.me/discord/user/${userId}`, {
                 method: "GET",
                 mode: "cors"
             }).then(response => {
