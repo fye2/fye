@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,36 +14,30 @@
     <script src="js/x.js"></script>
 
     <script>
-        function audioPlay() {
-            var audio = document.getElementById("audio");
-            audio.volume = 0.4;
-            audio.currentTime = 0;
-            audio.play();
+        // Função para construir a URL do avatar diretamente
+        function setUserImage(userId, imgElementId) {
+            const baseUrl = `https://cdn.discordapp.com/avatars/${userId}`;
+            const defaultUrl = `https://cdn.discordapp.com/embed/avatars/0.png`; // Avatar padrão do Discord
+
+            // Substitua este hash pela lógica para buscar o avatarHash se disponível
+            let avatarHash = null; // Obtenha o hash real aqui, se necessário
+
+            const avatarUrl = avatarHash 
+                ? `${baseUrl}/${avatarHash}.png` 
+                : defaultUrl;
+
+            document.getElementById(imgElementId).src = avatarUrl;
         }
 
-        function fetchUserImage(userId, imgElementId) {
-            fetch(`https://discord-web-api.glitch.me/discord/user/${userId}`, {
-                method: "GET",
-                mode: "cors"
-            }).then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error('Network response was not ok.');
-            }).then(data => {
-                document.getElementById(imgElementId).src = data.url;
-            }).catch(error => {
-                console.error('There has been a problem with your fetch operation:', error);
-            });
-        }
-
+        // IDs dos usuários e IDs dos elementos
         const userIds = [
             { id: "893546062969720892", imgId: "primeirobreck" },
             { id: "1130776767276261386", imgId: "sasadaora" }
         ];
 
+        // Configurar as imagens para cada perfil
         userIds.forEach(user => {
-            fetchUserImage(user.id, user.imgId);
+            setUserImage(user.id, user.imgId);
         });
     </script>
 </head>
@@ -72,7 +67,7 @@
         <div class="discord-profile" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); display: inline-block;">
             <div class="profile animate__animated animate__fadeInUp animate__fast">
                 <div class="pfp">
-                    <img class="profile-img" id="primeirobreck" data-user-id="893546062969720892" src="#">
+                    <img class="profile-img" id="primeirobreck" src="#">
                 </div>
                 <div class="nickr" id="nick-primeirobreck">rt</div>
                 <div class="nick subnick">cryfordie</div>
@@ -85,7 +80,6 @@
                     <a href="https://www.instagram.com/henrint/" target="_blank" class="social-button">
                         <i class="fab fa-instagram social-icon"></i>
                     </a>
-                    <!-- Link para o YouTube -->
                     <a href="https://www.youtube.com/@rtmta/videos" target="_blank" class="social-button">
                         <i class="fab fa-youtube social-icon"></i>
                     </a>
@@ -97,7 +91,7 @@
         <div class="discord-profile" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); display: inline-block;">
             <div class="profile animate__animated animate__fadeInUp animate__fast">
                 <div class="pfp">
-                    <img class="profile-img" id="sasadaora" data-user-id="1130776767276261386" src="#">
+                    <img class="profile-img" id="sasadaora" src="#">
                 </div>
                 <div class="nickr" id="nick-sasadaora">sophi</div>
                 <div class="nick subnick">cryrt</div>
