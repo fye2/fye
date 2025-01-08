@@ -11,18 +11,15 @@
     <script src="js/blocker.js"></script>
     <script src="js/api.js"></script>
     <script src="js/x.js"></script>
-    <script src="js/change.js"></script>
-    
+
     <script>
-        // Função para reproduzir a música no segundo escolhido
-        function audioPlay(startTime) {
+        function audioPlay() {
             var audio = document.getElementById("audio");
-            audio.volume = 1.0;
-            audio.currentTime = 16; //
+            audio.volume = 0.9;
+            audio.currentTime = 16;
             audio.play();
         }
 
-        // Função para buscar as imagens dos usuários
         function fetchUserImage(userId, imgElementId) {
             fetch(`https://discord-web-api.glitch.me/discord/user/${userId}`, {
                 method: "GET",
@@ -39,13 +36,11 @@
             });
         }
 
-        // IDs dos usuários e onde as imagens vão ser exibidas
         const userIds = [
             { id: "913214371948290099", imgId: "primeirobreck" },
             { id: "1130776767276261386", imgId: "sasadaora" }
         ];
 
-        // Carregar as imagens
         userIds.forEach(user => {
             fetchUserImage(user.id, user.imgId);
         });
@@ -53,15 +48,13 @@
 </head>
 
 <body>
-    <audio loop preload="auto" id="audio">
+    <audio loop="" preload="auto" id="audio">
         <source src="media/neww.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
     </audio>
 
-    <!-- Overlay clicável para controlar a música -->
     <input type="checkbox" autocomplete="off" id="overlay-toggle">
     <div class="overlay fullscreen">
-        <label for="overlay-toggle" onclick="audioPlay(0);">
+        <label for="overlay-toggle" onclick="audioPlay();">
             <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
             <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">
                 <img src="images/1090793852694175744.png" alt="image/gif">
@@ -69,8 +62,7 @@
         </label>
     </div>
 
-    <!-- Vídeo -->
-    <video autoplay loop muted>
+    <video autoplay="" loop="" muted="">
         <source src="media/new.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
     </video>
@@ -92,6 +84,7 @@
                     <a href="https://www.instagram.com/henrint/" target="_blank" class="social-button">
                         <i class="fab fa-instagram social-icon"></i>
                     </a>
+                    <!-- Link para o YouTube -->
                     <a href="https://www.youtube.com/@rtmta/videos" target="_blank" class="social-button">
                         <i class="fab fa-youtube social-icon"></i>
                     </a>
